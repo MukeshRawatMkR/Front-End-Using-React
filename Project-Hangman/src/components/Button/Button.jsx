@@ -1,9 +1,11 @@
 import React from "react";
 import getButtonStyling from "./getButtonStyling";
-function Button({ text, onClickHandler, styleType ="primary" }) {
+function Button({ text, onClickHandler, styleType ="primary", type="button"}) {
 
 return (
-<button onClick={onClickHandler} className={`text-white px-4 py-2 ${getButtonStyling(styleType)}`}>
+<button onClick={onClickHandler}
+type={type}
+className={`text-white px-4 py-2 ${getButtonStyling(styleType)}`}>
     {text}
 </button>    
 );

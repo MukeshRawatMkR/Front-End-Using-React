@@ -1,12 +1,28 @@
-# React + Vite
+#
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Presenter-container design pattern in React**
 
-Currently, two official plugins are available:
+-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Why React doesn't track the normal varibales in a component?**
 
-## Expanding the ESLint configuration
+- Bcz, In react the normal variable are used to write the business logic not to track the variable, if we use normal variable to track it'll apply only at initial stage just to render a component, only once. post that we can't use it to render the UI or component again.
+- For that we use state variables.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**React Hooks -> special functions**
+
+- useState() -> returns a state variable in a form of array, then we destructure it.
+
+
+**Routing in React**
+- react-router-dom -> 3rd party library
+    - using two ways we can direct to another page/route
+        - Using 'Link'
+        - redirection but after only some logics. using -> 'useNavigate()' hook, given by library itself. 
+
+
+
+H/w -> in React using react-router-dom, how can we go from route/page to another route/page with some data, so that we can access that data in our 2nd page which was passed from 1st page? find the best optimal solution for our game.
+
+
+(15:59)

@@ -1,23 +1,19 @@
 import React from "react";
-import Button from "./components/Button/Button";
-import { TextInput } from "./components/TextInput/TextInput";
+import TextInputFormContainer from "./components/TextInputForm/TextInputFormContainer";
+import { Route, Routes } from "react-router-dom";
+import StartGame from "./pages/StartGame";
+import PlayGame from "./pages/PlayGame";
+
 function App() {
- return (
-    <div>
-       <Button text="Log in" styleType= "error" onClickHandler={() => console.log("Log in clicked")} />
-       <Button text="Sign in" styleType="primary" onClickHandler={() => console.log("Sign in clicked")} />
-       <Button text="Sign up" styleType="success" onClickHandler={() => console.log("Sign up clicked")} />
-       <Button text="Add to cart" styleType="warning" onClickHandler={() => console.log("Add to cart clicked")} />
+  return (
 
-        <TextInput
-          label="Enter some text"
-          placeholder="Enter some text here"
-          value={""}
-          onChangeHandler={(e) => {console.log(e.target.value)}}
-        />
+      <Routes>
+        <Route path="/start" element={<StartGame/>}/>  
+        <Route path="/play" element={<PlayGame/>}/>  
+     <Route path="/" element={<h1>Home</h1>}/>
+      </Routes>
 
-    </div>
- ) 
-};
+    );
+}
 
-export default App
+export default App;
