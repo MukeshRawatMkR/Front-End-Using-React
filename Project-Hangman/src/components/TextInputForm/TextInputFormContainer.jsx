@@ -14,9 +14,10 @@ const navigate = useNavigate();//returns navigator function.
     event.preventDefault(); //to prevent the default behaviour of submit button which is to reload the page.
     console.log("Form Submitted: ", value);
   if(value){
-    navigate('/play');//or we can do it in setTimeout().
+    navigate(`/play`,{state:{selectedWord:value}});
   }
   }
+
 
   function handleTextInputChange(event) {
     console.log("Text Input Changed");

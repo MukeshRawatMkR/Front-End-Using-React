@@ -73,10 +73,33 @@
 
 - **Routing in React**
 - react-router-dom -> 3rd party library
+
   - using two ways we can direct to another page/route
     - Using 'Link'
     - redirection but after only some logics. using -> 'useNavigate()' hook, given by library itself.
 
-H/w -> in React using react-router-dom, how can we go from route/page to another route/page with some data, so that we can access that data in our 2nd page which was passed from 1st page? find the best optimal solution for our game.
+- H/w -> in React using react-router-dom, how can we go from route/page to another route/page with some data, so that we can access that data in our 2nd page which was passed from 1st page? find the best optimal solution for our game.?
 
-(15:59)
+  - 1. Given by react-router-dom: navigate(`/play?text=${value}`); -> using query params, but we can see the data in params explicitly.
+       _useSearchParam() hook provided by RRD, to fetch that query params_
+
+    - example:
+      - const [queryParam] = useSearchParams(); -> 1st hook
+      - console.log('query params:',queryParam.get("text"));
+
+  - 2. using Path params: 
+    -example:
+      - <Route path="/play/:text" element={<PlayGame/>}/> -> :variable-name, we define it to get path params from other page or route.
+      - navigate(`/play/${value}`); -> here we pass the value.
+      - let {text}= useParams(); -> used via a hook.
+      *but we can see the params in the URL again.*
+
+  - 3. navigate(`/play`,{state:{selectedWord:value}});
+    - example:
+      - const {state:{selectedWord}} = useLocation(); -> a hook
+      *now we can't see the params in the URL, yeaaaaaaaaahhhhhhhhhhhhh*
+
+  - 4. useContext API or Redux, zustand & mobex etc...
+
+
+
