@@ -14,23 +14,23 @@ function PlayGame() {
     state: { selectedWord },
   } = useLocation();
 
-const [guessedLetters, setGuessedLetters] = React.useState([]);
+  const [guessedLetters, setGuessedLetters] = React.useState([]);
 
-function handleLetterClick(letter){
-  setGuessedLetters([...guessedLetters, letter]);
-}
+  function handleLetterClick(letter) {
+    setGuessedLetters([...guessedLetters, letter]);
+  }
 
   return (
     <>
       <h1>play Game page {selectedWord}</h1>
       <MaskedText text={selectedWord} guessedLetters={guessedLetters} />
       <div>
-      <LetterButtons
-        text={selectedWord}
-        guessedLetters={guessedLetters}
-        onLetterClick={handleLetterClick}
-      />  
-      </div>  
+        <LetterButtons
+          text={selectedWord}
+          guessedLetters={guessedLetters}
+          onLetterClick={handleLetterClick}
+        />
+      </div>
       <Link to={"/start"} className="text-blue-400">
         start Game Link
       </Link>
