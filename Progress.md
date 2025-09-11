@@ -29,13 +29,13 @@
   - We have two ways: 'ES'(module) and 'CJS'(commonjs) moduling.
     - 1. In ES we have 'named' and 'default' export
       - Default: export default function-name; | to import this we use: import funtion-name from file-path;
-        - in this default we export only one function, and can import it using any name(nick-name). In fact we can export by adding 'export default' in front of the function/variable/class.
-      - Named: export function-name; | to import this we use object: import {-,-,-} from file-path;
+        - in this export default we export only one function/variable/class, and can import it using any name(nick-name). In fact we can export by adding 'export default' in front of the function/variable/class.
+      - Named: export function-name; or we can write: export {function-name, variable-name, class-name, ...} at the end of the  file. | to import this we use object: import {-,-,-} from file-path;
         - we can export by adding 'export' in front of the function/variable/class. if we don't use 'default' keyowrd it'll automatically behave as a named export.
         - we can alias our named import, for e.g, import {button as btn} from file-path;
       - Note: if we want to write mix of both world, we can do it, but first 'named export' and at the bottom of the file we can write 'export default'.
     - 2. CJS(commonjs)
-      - Default: to export: 'module.exports' | to import: 'const name-> require('file-path');'
+      - Default: to export: 'module.exports-> function-name/variable/class;' | to import: 'const name-> require('file-path');'
       - Named: to export: 'module.exports' with object | to import:
 
 - **Set-up folder structure**
