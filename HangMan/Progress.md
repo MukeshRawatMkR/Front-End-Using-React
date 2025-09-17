@@ -30,7 +30,7 @@
     - 1. In ES we have 'named' and 'default' export
       - Default: export default function-name; | to import this we use: import funtion-name from file-path;
         - in this export default we export only one function/variable/class, and can import it using any name(nick-name). In fact we can export by adding 'export default' in front of the function/variable/class.
-      - Named: export function-name; or we can write: export {function-name, variable-name, class-name, ...} at the end of the  file. | to import this we use object: import {-,-,-} from file-path;
+      - Named: export function-name; or we can write: export {function-name, variable-name, class-name, ...} at the end of the file. | to import this we use object: import {-,-,-} from file-path;
         - we can export by adding 'export' in front of the function/variable/class. if we don't use 'default' keyowrd it'll automatically behave as a named export.
         - we can alias our named import, for e.g, import {button as btn} from file-path;
       - Note: if we want to write mix of both world, we can do it, but first 'named export' and at the bottom of the file we can write 'export default'.
@@ -60,7 +60,15 @@
 
 - **Presenter-container design pattern in React**
 
-  -
+  - The Container/Presentational pattern in React is a design pattern that separates components into two distinct types:
+
+    - Container Components (Smart Components):
+      _Container Component (UserListContainer.jsx)_
+      These components are responsible for "how things work." They handle the logic, data fetching, state management, and interaction with APIs or other data sources. They don't typically render much UI directly but instead pass data and functions as props to their associated presentational components.
+
+    - Presentational Components (Dumb Components):
+      _Presentational Component (UserList.jsx)_
+      These components are responsible for "how things look." They receive data and callback functions as props from their container components and focus solely on rendering the UI based on that information. They are typically stateless functional components and should not contain any business logic or data fetching.
 
 - **Why React doesn't track the normal varibales in a component?**
 
@@ -87,22 +95,21 @@
       - const [queryParam] = useSearchParams(); -> 1st hook
       - console.log('query params:',queryParam.get("text"));
 
-  - 2. using Path params: 
-    -example:
-      - <Route path="/play/:text" element={<PlayGame/>}/> -> :variable-name, we define it to get path params from other page or route.
-      - navigate(`/play/${value}`); -> here we pass the value.
-      - let {text}= useParams(); -> used via a hook.
-      *but we can see the params in the URL again.*
+  - 2. using Path params:
+       -example:
+
+    - <Route path="/play/:text" element={<PlayGame/>}/> -> :variable-name, we define it to get path params from other page or route.
+    - navigate(`/play/${value}`); -> here we pass the value.
+    - let {text}= useParams(); -> used via a hook.
+      _but we can see the params in the URL again._
 
   - 3. navigate(`/play`,{state:{selectedWord:value}});
+
     - example:
       - const {state:{selectedWord}} = useLocation(); -> a hook
-      *now we can't see the params in the URL, yeaaaaaaaaahhhhhhhhhhhhh*
+        _now we can't see the params in the URL, yeaaaaaaaaahhhhhhhhhhhhh_
 
   - 4. useContext API or Redux, zustand & mobex etc...
 
-
-
 - **Conditional Rendering**
   - using ternay operator.
-

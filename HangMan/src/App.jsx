@@ -1,16 +1,11 @@
 import "./App.css";
-import Button from "./components/Button/Button";
-import TextInput from "./components/TextInput/TextInput";
-// import React from "react";
-
+import TextInputFormContainer from "./components/TextInputForm/TextInputFormContainer";
 function App() {
   return (
     <div>
-      <Button text="Click Me 1"  onClickHandler={() => console.log("Clicked 1!")} styleType="primary" />
-      <Button text="Click Me 2" onClickHandler={() => console.log("Clicked 2!")} />
-      <Button text="Click Me 3" onClickHandler={() => console.log("Clicked 3!")} styleType="success" />
+      <TextInputFormContainer />
 
-        <TextInput label="Enter some text" placeholder="Enter some text here..." onChangeHandler={(e) => console.log(e.target.value)} />
+
     </div>
   );
 }
