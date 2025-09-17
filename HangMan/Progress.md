@@ -53,7 +53,7 @@
   - If we want to write CSS manually, we don't have to export it, but the file using it, it should import it.
   - to give custom tailwind value, use [].
 
-- **JSX**
+- **JSX: Fragment**
 
   - in each component we can't return mulitple components(elements), for ex -> return(<h1>hello</h1> <p>p</P>); we can't do that, we can only return one component(a parent element ex, <div>...</div> only), and that is parent component in which multiple childerens are written within it. if we wanna do that, read below line...
   - we can return multiple components by using fragments(<>...</>), but we can't style it(fragment).
