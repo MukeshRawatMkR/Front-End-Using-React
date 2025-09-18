@@ -90,16 +90,17 @@
 - H/w -> in React using react-router-dom, how can we go from route/page to another route/page with some data, so that we can access that data in our 2nd page which was passed from 1st page? find the best optimal solution for our game.?
 
   - 1. Given by react-router-dom: navigate(`/play?text=${value}`); -> using query params, but we can see the data in params explicitly.
-       _useSearchParam() hook provided by RRD, to fetch that query params_
+       _useSearchParams() hook provided by RRD, to fetch that query params_
 
     - example:
       - const [queryParam] = useSearchParams(); -> 1st hook
       - console.log('query params:',queryParam.get("text"));
 
+
   - 2. using Path params:
        -example:
 
-    - <Route path="/play/:text" element={<PlayGame/>}/> -> :variable-name, we define it to get path params from other page or route.
+    - <Route path="/play/:text" element={<PlayGame/>}/> -> :variable-name, we define it to get path params from other route.
     - navigate(`/play/${value}`); -> here we pass the value.
     - let {text}= useParams(); -> used via a hook.
       _but we can see the params in the URL again._

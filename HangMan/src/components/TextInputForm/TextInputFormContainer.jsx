@@ -17,7 +17,7 @@ function TextInputFormContainer() {
     e.preventDefault();
     console.log("Form Submitted and the value is:", value);
     if (value.trim()) {
-      navigate("/play");
+      navigate("/play", {state: {guessedWord: value}});
     }
   }
 
