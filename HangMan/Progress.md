@@ -81,9 +81,10 @@
 
 - **Routing in React**
 - react-router-dom -> 3rd party library
-
+  - import 'BrowserRouter' and then wrap your vital component inside it.
+  - Routes, Route
   - using two ways we can direct to another page/route
-    - Using 'Link'
+    - Using 'Link to'
     - redirection but after only some logics. using -> 'useNavigate()' hook, given by library itself.
 
 - H/w -> in React using react-router-dom, how can we go from route/page to another route/page with some data, so that we can access that data in our 2nd page which was passed from 1st page? find the best optimal solution for our game.?
@@ -113,3 +114,17 @@
 
 - **Conditional Rendering**
   - using ternay operator.
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------
+https://chatgpt.com/c/68cab43d-6224-832f-998b-70911aa17b62
