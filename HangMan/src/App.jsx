@@ -16,3 +16,7 @@ function App() {
 }
 
 export default App;
+
+//Todo
+//congrations if word is correct
+//bummed if lost. 

@@ -119,15 +119,19 @@
   - *H/W*
 
 
+
+
 - **Conditional Rendering**
   - using ternay operator.
 
 
 
+- **Conditional Chaining**
+  - *H/W*
 
 
-
-
+- **assests folder**
+  - to store static files.
 
 
 
