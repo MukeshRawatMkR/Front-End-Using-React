@@ -11,7 +11,7 @@ export function getMaskedString(originalString, guessedLetters) {
         }
     });
 
-    return result.join(' ');
+    return result;
 
 }
     

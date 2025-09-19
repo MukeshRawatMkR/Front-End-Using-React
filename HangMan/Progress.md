@@ -113,6 +113,12 @@
 
   - 4. useContext API or Redux, zustand & mobex etc...
 
+
+
+- **Rendering List in React, and why 'key' prop error?**
+  - *H/W*
+
+
 - **Conditional Rendering**
   - using ternay operator.
 
