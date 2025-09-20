@@ -20,3 +20,4 @@ export default App;
 //Todo
 //congrations if word is correct
 //bummed if lost. 
+//send hint word also to play game from start game.

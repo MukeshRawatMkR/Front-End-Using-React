@@ -1,4 +1,7 @@
 **1. How to transfer the data from one route to another route using react-router-dom?**
 - https://chatgpt.com/c/68cb97d1-d690-8327-89ca-9108fbdf4952
 
-**2.**
+**2. Updating Arrays or Objects using state variable in React?**
+- https://www.google.com/search?client=firefox-b-d&q=react+array+and+object+update+using+useState&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kwv-_tUbRt8pOUS8_MjaceHuSAD6YvWZ0rfFzwmtmaBgLepZn2IJkVH-w3cPU5sPVz9l1Pp06apNShUnFfpGUJOF8p91U6HxH3ukND0OVTTVy0CGuHNdViLZqynGb0mLSRGeGVO46qnJ_2yk3F0uV6R6BW9rQ&ved=2ahUKEwjj99nEwOaPAxWQumMGHY6iJSUQ0NsOegQIMRAA&aep=10&ntc=1&mtid=1y3OaNC0MJGY4-EP89PS4Q4&mstk=AUtExfAB81k4Iuz8NOiW7qy4oow7YLLFbnLGrI3SHvpVkdufrjMHYX_xUv6qjLXi76Z51zthGvrrV4GMLvH8DI4F0VJfzRnQ5HekzGL6vZKNpMamMQ5VRm6Cw50_x50o289WjaKcoF8ijoXMZMX0OXUlUtChZSVotnEe7bGG285fy6dXKSMgkZD4yTrncscC3S02cX03GnwHPFzWkVtQQf73vxKqnwNayKv0JELQNVMGPnQCPfZn6UZ2lMbBTbo6nhtDhvkM_wmoBZCQta0cZZ1wA2wOqvR2GwSZVajBk2AfTc7FYPGhRjhfBzq8epWaWcnVmKLcG8QNGRG5MA&csuir=1
+
+**3. **

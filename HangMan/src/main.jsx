@@ -10,4 +10,3 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </StrictMode>
 );
-//7min remaining: implmenet routes and route in app.jsx.
