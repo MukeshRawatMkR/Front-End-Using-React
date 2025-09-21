@@ -133,7 +133,11 @@
 - **assests folder**
   - to store static files.
 
+- **useEffect**
+  - can't use any other hook inside it.
 
+-**npm i json-server**
+  - npx json-server wordServer/db.json *run it into terminal*
 
 
 

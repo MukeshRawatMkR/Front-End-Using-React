@@ -1,0 +1,48 @@
+{
+    "words": [
+        {
+            "wordValue": "MANGO",
+            "wordHint": "A fruit"
+        },
+        {
+            "wordValue": "LONDOND",
+            "wordHint": "A city"
+        },
+        {
+            "wordValue": "ELEPHANT",
+            "wordHint": "A large animal"
+        },
+        {
+            "wordValue": "PYTHON",
+            "wordHint": "A programming language"
+        },
+        {
+            "wordValue": "TOKYO",
+            "wordHint": "A city"
+        },
+        {
+            "wordValue": "CARROT",
+            "wordHint": "A vegetable"
+        },
+        {
+            "wordValue": "TABLE",
+            "wordHint": "A piece of furniture"
+        },
+        {
+            "wordValue": "APPLE",
+            "wordHint": "A fruit"
+        },
+        {
+            "wordValue": "BANANA",
+            "wordHint": "A fruit"
+        },
+        {
+            "wordValue": "INDIA",
+            "wordHint": "A country"
+        },
+        {
+            "wordValue": "USA",
+            "wordHint": "A country"
+        }
+    ]
+}

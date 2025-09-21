@@ -1,51 +1,56 @@
-import { useState } from "react";
+//todo -> divide the file into presenter and container pattern.
+
+
 import { Link, useLocation } from "react-router-dom";
-import MaskedText from "../components/MaskedText/MaskedText";
+import Maskedtext from "../components/MaskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/LetterButtons";
+import { useState } from "react";
 import HangMan from "../components/HangMan/HangMan";
+
 function PlayGame() {
-  const {
-    state: { guessedWord },
-  } = useLocation();
-  // console.log(state);
 
-  const[guessedLetters, setGuessedLetters] = useState([]);
-  const[step, setSteup]=useState(0);
+    // const [searchParams] = useSearchParams();
+    // console.log(searchParams.get("text"))
 
-  function handleLetterClick(letter){
-    if(guessedWord.toUpperCase().includes(letter)){
-      console.log("correct");
+    // const { text, id } = useParams();
+
+    const { state } = useLocation();
+
+    const [guessedLetters, setGuessedLetters] = useState([]);
+    const [step, setStep] = useState(0);
+
+    function handleLetterClick(letter) {
+        if(state?.wordSelected?.toUpperCase().includes(letter)) {
+            console.log('Correct');
+        } else {
+            console.log('Wrong');
+            setStep(step + 1);
+        }
+
+        setGuessedLetters([...guessedLetters, letter]);
     }
-    else{
-      console.log("incorrect");
-      setSteup(step+1);
-    }
 
+    return (
+        <>
+            <h1>Play Game </h1>
 
-    setGuessedLetters([...guessedLetters, letter]);//*
-}
+            {state?.wordSelected && (
+                <>
+                    <Maskedtext text={state.wordSelected} guessedLetters={guessedLetters} />
+                    <div>
+                        <LetterButtons text={state.wordSelected} guessedLetters={guessedLetters} onLetterClick={handleLetterClick} />
 
-  return (
-    <div>
-      <h1>Play Game Page: {guessedWord.toUpperCase()}</h1>
-      <MaskedText text={guessedWord} guessedLetters={guessedLetters} />
+                    </div>
+                    <div>
+                        <HangMan step={step} />
+                    </div>  
+                </> 
+            )}
 
-<div>
-      <LetterButtons
-        text={guessedWord}
-        guessedLetters={guessedLetters}
-        onLetterClick={handleLetterClick}
-      />
-</div>
-<div>
-  <HangMan step={step}/>
-</div>
-      <Link to="/start" className="text-blue-800">
-        Go to Start Game Page
-      </Link>
-    </div>
-  );
+            <Link to='/'>Home</Link>
+            <Link to='/start'  className="text-blue-400">Start Game Link</Link>
+        </>
+    );
 }
 
 export default PlayGame;
-//todo -> divide the file into presenter and container pattern.
