@@ -136,10 +136,25 @@
 - **useEffect**
   - can't use any other hook inside it.
 
--**npm i json-server**
+- **npm i json-server**
   - npx json-server wordServer/db.json *run it into terminal*
 
+
+-  **lifting the state up and then Props drilling in react?**
+  *Prop drilling is caused by lifting the state up.*
+  - https://react.dev/learn/passing-data-deeply-with-context
+  
+  *how to resolve it? -> using state management to create separate storage*
+  *1. using 3rd party libraries: zustand, redux, mobx etc*
+  *2. or we can use react inbuilt tool which is->Context API's*
+
+*how to decide now it's the time to put our state in seprate storrage like state management?*
+*1. if hierarchy is completely different and they need to pass some data.*
+*2. *design or plan your project beforehand*
 
 
 -------------------
 https://chatgpt.com/c/68cab43d-6224-832f-998b-70911aa17b62
+
+
+//40min done react lecture
